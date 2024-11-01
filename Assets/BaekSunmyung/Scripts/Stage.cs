@@ -115,8 +115,8 @@ public class Stage : MonoBehaviour
     public bool IsWave { get { return isWave; } }
     private void Awake()
     {
-        bossChallengeBtn.onClick.AddListener(BossChallenge);
-        testModeButton.onClick.AddListener(TestMode);
+      //  bossChallengeBtn.onClick.AddListener(BossChallenge);
+      //  testModeButton.onClick.AddListener(TestMode);
     }
 
     private void Start()
@@ -131,7 +131,7 @@ public class Stage : MonoBehaviour
         monsters = new MonsterModel[5];
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDataModel>();
-        bossObject.gameObject.SetActive(false);
+     //   bossObject.gameObject.SetActive(false);
 
     }
 
