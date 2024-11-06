@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7968aca8343bfc342878d103ba0fe498, type: 3}
+  m_Name: Fourth
+  m_EditorClassIdentifier: 
+  backGroundSprite:
+  - {fileID: 21300000, guid: 7075b62dbdbc3154d9b96bb99e129a14, type: 3}
+  - {fileID: 21300000, guid: eef43f96cce791340b3c37a4858bdc3d, type: 3}
+  skySprite:
+  - {fileID: 21300000, guid: 5ab2afe5eb38dd74d9f982317cc23d3c, type: 3}
+  - {fileID: 21300000, guid: 5083751e5ded401468b3334e43b85b04, type: 3}
