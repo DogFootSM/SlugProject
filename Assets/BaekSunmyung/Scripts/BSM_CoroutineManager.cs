@@ -4,9 +4,9 @@ using System.Reflection.Emit;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CoroutineManager : MonoBehaviour
+public class BSM_CoroutineManager : MonoBehaviour
 {
-    public static CoroutineManager Instance { get; private set; }
+    public static BSM_CoroutineManager Instance { get; private set; }
 
 
     private Dictionary<MonoBehaviour, Coroutine> newCoList = new Dictionary<MonoBehaviour, Coroutine>();

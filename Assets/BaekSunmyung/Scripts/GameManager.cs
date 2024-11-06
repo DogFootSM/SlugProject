@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
         set { isOpenInventory = value; }
     }
 
-    public Stage StageInstance;
+    public BSM_Stage StageInstance;
 
     [SerializeField] DateTime exitTime;
     [SerializeField] DateTime startTime;

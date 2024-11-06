@@ -36,7 +36,7 @@ public class SkillUseManager : MonoBehaviour
         if (AutoOnOff == false) { AutoOnOff = true; }
         else if (AutoOnOff) { AutoOnOff = false; }
 
-        CoroutineManager.Instance.ManagerCoroutineStart(StartCoroutine(SkillAuto()), this);
+        BSM_CoroutineManager.Instance.ManagerCoroutineStart(StartCoroutine(SkillAuto()), this);
     }
 
 

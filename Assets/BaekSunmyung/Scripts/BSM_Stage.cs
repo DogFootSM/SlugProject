@@ -13,14 +13,14 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class Stage : MonoBehaviour
+public class BSM_Stage : MonoBehaviour
 {
     [Header("스테이지 난이도 능력치")]
-    [SerializeField] private StageDifficult stageDifficult;
+    [SerializeField] private BSM_StageDifficult stageDifficult;
 
     [Header("맵 스테이지 데이터")]
-    [SerializeField] private List<MapData> mapData = new List<MapData>();
-    [SerializeField] private MapController mapController;
+    [SerializeField] private List<BSM_MapData> mapData = new List<BSM_MapData>();
+    [SerializeField] private BSM_MapController mapController;
     [SerializeField] private Image foreGround;
 
     [Header("Monster Spawn")]
@@ -75,7 +75,7 @@ public class Stage : MonoBehaviour
     //Data Table CSV 변수
     private StageCSV stageCSV;
 
-    private CoroutineManager coroutineManager;
+    private BSM_CoroutineManager coroutineManager;
 
     //Data Table Index 변수
     private int parserIndex;
@@ -141,10 +141,10 @@ public class Stage : MonoBehaviour
 
     private void Start()
     {
-        coroutineManager = CoroutineManager.Instance;
+        coroutineManager = BSM_CoroutineManager.Instance;
         stageCSV = StageCSV.Instance;
         monsters = new MonsterModel[5];
-        parserIndex = StageManager.Instance.StageIndex;
+        parserIndex = BSM_StageManager.Instance.StageIndex;
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDataModel>();
         bossObject.gameObject.SetActive(false);
@@ -419,7 +419,7 @@ public class Stage : MonoBehaviour
     private IEnumerator CreateMonsterCo()
     {
         monsters = new MonsterModel[curWaveMonsterCount]; 
-        yield return CoroutineManager.Instance.GetWaitForSeconds(cycleTimer);
+        yield return BSM_CoroutineManager.Instance.GetWaitForSeconds(cycleTimer);
 
         createLimitCount = 0;
         fieldWaveMonsterCount = curWaveMonsterCount;
@@ -460,7 +460,7 @@ public class Stage : MonoBehaviour
 
                 createLimitCount++;
             }
-            yield return CoroutineManager.Instance.GetWaitForSeconds(createTimer);
+            yield return BSM_CoroutineManager.Instance.GetWaitForSeconds(createTimer);
 
         }
         
@@ -557,7 +557,7 @@ public class Stage : MonoBehaviour
         bool isCheck = false;
          
         //CoroutineManager.Instance.ManagerCoroutineStop(createCoroutineName);
-        CoroutineManager.Instance.ManagerCoroutineStop(this);
+        BSM_CoroutineManager.Instance.ManagerCoroutineStop(this);
 
         while (true)
         {

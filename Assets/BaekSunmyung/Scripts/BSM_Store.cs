@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 
 
-public class Store : MonoBehaviour
+public class BSM_Store : MonoBehaviour
 {
     [Header("GR Ray")]
     private GraphicRaycaster ray;
@@ -31,7 +31,7 @@ public class Store : MonoBehaviour
     [SerializeField] private TextMeshProUGUI curAttackTextBuy;
     [SerializeField] private TextMeshProUGUI descText;
     [SerializeField] private Image itemIconImageBuy;
-    [SerializeField] private List<ShopData> shopData = new List<ShopData>();
+    [SerializeField] private List<BSM_ShopData> shopData = new List<BSM_ShopData>();
     private TextMeshProUGUI buyText;
 
     //WeaponInfo ÀÚ¸®
@@ -47,7 +47,7 @@ public class Store : MonoBehaviour
     private int itemPrice = 0;
 
     private Color tureColor = new Color(1f, 1f, 1f, 1f);
-    private ShopData curShopData;
+    private BSM_ShopData curShopData;
     private int shopIndex = 0;
     private bool isSelect;
 

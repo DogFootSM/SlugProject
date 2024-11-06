@@ -5,7 +5,7 @@ using System;
 
 
 [CreateAssetMenu(menuName = "CreateMap/Map")]
-public class MapData : ScriptableObject
+public class BSM_MapData : ScriptableObject
 {
     [Header("맵 데이터")]
     [Tooltip("중분류 맵에 사용할 배경 이미지")]

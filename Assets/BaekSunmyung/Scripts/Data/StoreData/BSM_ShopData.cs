@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(menuName ="CreateStore/Shop")]
-public class ShopData : ScriptableObject
+public class BSM_ShopData : ScriptableObject
 {
     [SerializeField] private StoreType storeType;
     public StoreType CurStoreType { get { return storeType; } }

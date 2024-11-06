@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Fade : MonoBehaviour
+public class BSM_Fade : MonoBehaviour
 {
     [SerializeField] private float fadeInTime;
     [SerializeField] private float fadeOutTime;

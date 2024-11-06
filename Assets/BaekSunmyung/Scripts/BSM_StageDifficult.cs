@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic; 
 using UnityEngine;
 
-public class StageDifficult : MonoBehaviour
+public class BSM_StageDifficult : MonoBehaviour
 {
     [SerializeField] int bossValue;
 

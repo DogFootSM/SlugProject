@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapController : MonoBehaviour
+public class BSM_MapController : MonoBehaviour
 {
 
-    [SerializeField] private Stage stage;
+    [SerializeField] private BSM_Stage stage;
     [Header("맵 스테이지 데이터")]
-    [SerializeField] private List<MapData> mapData = new List<MapData>();
+    [SerializeField] private List<BSM_MapData> mapData = new List<BSM_MapData>();
 
     [Header("배경 이미지 리스트")]
     [SerializeField] private List<GameObject> backgroundMaps = new List<GameObject>();
@@ -16,7 +16,7 @@ public class MapController : MonoBehaviour
     [Header("배경 이미지 이동 속도")]
     [SerializeField] private float mapTranslateSpeed;     //Player MoveSpeed 고려
 
-    [SerializeField] private Fade fade;
+    [SerializeField] private BSM_Fade fade;
 
     [Header("Background Map Reset")]
     [SerializeField] private float backGroundResetSpeed;
@@ -38,7 +38,7 @@ public class MapController : MonoBehaviour
     private int viewMonsterCount;
     private bool isDeath;
 
-    private CoroutineManager crManager;
+    private BSM_CoroutineManager crManager;
     private Coroutine resetRoutine;
     private bool isChange;
     private string coroutineName = "ResetCoroutine";
@@ -55,7 +55,7 @@ public class MapController : MonoBehaviour
 
     private void Start()
     {
-        crManager = CoroutineManager.Instance;
+        crManager = BSM_CoroutineManager.Instance;
         bgAction = ResetBackGround;
         stage.BackGroundResetAction(bgAction);
     }
@@ -181,7 +181,7 @@ public class MapController : MonoBehaviour
 
     private IEnumerator MapResetCoroutine()
     {
-        yield return CoroutineManager.Instance.GetWaitForSeconds(backGroundResetSpeed);
+        yield return BSM_CoroutineManager.Instance.GetWaitForSeconds(backGroundResetSpeed);
 
         if (!isChange)
         {
