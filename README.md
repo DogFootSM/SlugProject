@@ -12,11 +12,8 @@
 
 - 기능 구현 :
     - 스테이지
-       - BSM_Stage.cs , BSM_StageDifficult.cs, BSM_StageManager.cs, BSM_EnumData.cs, BSM_Fade.cs, BSM_MapController.cs, BSM_MapData.cs
     - 코루틴 매니저
-       - BSM_CoroutineManager.cs
     - 아이템 상점
-       - BSM_Store.cs, BSM_ShopData.cs 
 
 - 총 개발 기간 : 약 2주
 
