@@ -12,7 +12,6 @@
 
 - 기능 구현 :
     - 스테이지
-    - 코루틴 매니저
     - 아이템 상점
 
 - 총 개발 기간 : 약 2주
@@ -26,5 +25,5 @@
 
 # 3. 영상 및 기술서
 - Notion : https://www.notion.so/12ef154c168680c2b475fead9f355574
- 
+- YouTube : https://youtu.be/mRews2Fg3DU?si=yFX-YWP7Jy1au9-X
 
